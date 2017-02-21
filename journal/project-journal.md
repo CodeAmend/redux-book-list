@@ -31,3 +31,30 @@ containers/book_list.js
 
 reducers/reducer_books.js <br>
 We just create reducer data for BookList
+
+
+## Review:
+* Redux is in charge of managing our application state
+  + state is a javasscript object
+* components are completly different from application state.
+* App state is formed by reducers
+  + reducers are tied together by combineReducers()
+  + each key gets one reducer
+    + which is responsible for each state
+  + reducers are changed by an application
+    + each time an action occurs it flows through entire project.
+* Actions and ActionCreators
+  + ActtionCreators are simple functions that return a ActionCreators
+  + Action is just a plain javascript object
+    + must have a 'type'
+    + 'payload' is optional
+
+
+We tied an actionCreator to the book-list-items. When user clicked on a
+book list item it called a action creator which dispatched out action
+
+action was seent to all different reducers
+reducers that cared return a piece of state
+
+global application state is injected into each container in the application
+containers are updated and rerendered
