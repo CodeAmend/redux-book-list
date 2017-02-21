@@ -9,6 +9,9 @@
 
 ![model diagram](react-redux-booklist-diagram.png)
 
+<br>
+![events of Redux](events.png)
+
 We have two reducers here: Books and ActiveBooks.
 
 
