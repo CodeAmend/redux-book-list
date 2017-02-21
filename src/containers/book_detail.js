@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 class BookDetail extends Component {
   render() {
     if(!this.props.book) {
+      // props.book starts out as null
       return (<div>Select book for details</div>)
     }
     return (
@@ -16,7 +17,9 @@ class BookDetail extends Component {
 }
 
 function mapStateToProps(state) {
-  return state.activeBook;
+  return {
+    book: state.activeBook
+  }
 }
 
 export default connect(mapStateToProps)(BookDetail);
